@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     // Referência estática ao game manager
     public static GameManager instance;
     public KanaDatabase kanaDatabase;
-    public KanaDictionary kanaDictionary;
     public Alphabet alphabet;
 
     /// <summary>
