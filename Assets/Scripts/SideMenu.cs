@@ -27,12 +27,11 @@ public class SideMenu : MonoBehaviour
     [SerializeField] private bool moving = false;
 
     /// <summary>
-    /// Faz o menu começar fechado, e faz com que o menu não se destrua ao carregar cenas diferentes
+    /// Faz o menu começar fechado
     /// </summary>
     void Start()
     {
         this.transform.position = closedPosition.transform.position;
-        DontDestroyOnLoad(this.transform.parent.gameObject);
     }
 
     /// <summary>
@@ -61,14 +60,11 @@ public class SideMenu : MonoBehaviour
         Vector2 swipe = touchEnd - touchBegin;
         if (Mathf.Abs(swipe.x) > swipeMinDistance)
         {
-            // Dependendo da direção do deslizamento, define a nova posição
+            // Dependendo da direção do deslizamento, abre ou fecha o menu
             if (swipe.x > 0f)
-                newPosition = openPosition.transform.position;
+                OpenMenu();
             else
-                newPosition = closedPosition.transform.position;
-
-            // Ativa variável para mover o menu
-            moving = true;
+                CloseMenu();
         }
     }
 
@@ -87,5 +83,23 @@ public class SideMenu : MonoBehaviour
             if (Mathf.Abs((this.transform.position - newPosition).magnitude) < tolerance)
                 moving = false;
         }
+    }
+
+    /// <summary>
+    /// Fecha o menu
+    /// </summary>
+    private void CloseMenu()
+    {
+        newPosition = closedPosition.transform.position;
+        moving = true;
+    }
+
+    /// <summary>
+    /// Abre o menu
+    /// </summary>
+    private void OpenMenu()
+    {
+        newPosition = openPosition.transform.position;
+        moving = true;
     }
 }

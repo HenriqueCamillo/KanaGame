@@ -12,22 +12,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject gamePanel;
     [SerializeField] private GameObject progressPanel;
     [SerializeField] private GameObject modeSelectPanel;
-    [SerializeField] private GameObject syllabaryProgressPanel;
 
 
     // Indica em qual menu o jogador está e qual silabário foi escolhido
     [SerializeField] private MenuState state;
-    [SerializeField] private Syllabary syllabary;
-
-
-    /// <summary>
-    /// Enumerador que indica qual está selecionado
-    /// </summary>
-    public enum Syllabary
-    {
-        Hiragana,
-        Katakana
-    }
 
     /// <summary>
     /// Enumerador que indica o estado atual (em qual menu o jogador está), para ser possível voltar entre os menus
@@ -38,7 +26,6 @@ public class MainMenu : MonoBehaviour
         GameMenu,
         ModeSelectMenu,
         ProgressMenu,
-        ShowingProgress
 
     }
 
@@ -51,7 +38,6 @@ public class MainMenu : MonoBehaviour
         gamePanel.SetActive(false);
         modeSelectPanel.SetActive(false);
         progressPanel.SetActive(false);
-        syllabaryProgressPanel.SetActive(false);
     }
 
     /// <summary>
@@ -66,13 +52,13 @@ public class MainMenu : MonoBehaviour
     /// <summary>
     /// Seleciona o silabário e vai para o submenu de seleção de modo de jogo
     /// </summary>
-    /// <param name="syllabary">Silabário escolhido</param>
-    public void SyllabaryGame(string syllabary)
+    /// <param name="alphabet">Alfabeto escolhido</param>
+    public void SyllabaryGame(string alphabet)
     {
-        if (syllabary.Equals("Hiragana"))
-            this.syllabary = Syllabary.Hiragana;
-        else if (syllabary.Equals("Katakana"))
-            this.syllabary = Syllabary.Katakana;
+        if (alphabet.Equals("Hiragana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Hiragana;
+        else if (alphabet.Equals("Katakana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Katakana;
 
         modeSelectPanel.SetActive(true);
         state = MenuState.ModeSelectMenu;
@@ -85,21 +71,6 @@ public class MainMenu : MonoBehaviour
     {
         progressPanel.SetActive(true);
         state = MenuState.ProgressMenu;
-    }
-
-    /// <summary>
-    /// Mostra o progresso atual do silabário escolhido
-    /// </summary>
-    /// <param name="syllabary">Silabário escolhido</param>
-    public void ShowProgress(string syllabary)
-    {
-        if (syllabary.Equals("Hiragana"))
-            this.syllabary = Syllabary.Hiragana;
-        else if (syllabary.Equals("Katakana"))
-            this.syllabary = Syllabary.Katakana;
-
-        syllabaryProgressPanel.SetActive(true);
-        state = MenuState.ShowingProgress;
     }
 
     /// <summary>
@@ -123,11 +94,6 @@ public class MainMenu : MonoBehaviour
             case MenuState.ProgressMenu:
                 progressPanel.SetActive(false);
                 state = MenuState.MainMenu;
-                break;
-
-            case MenuState.ShowingProgress:
-                syllabaryProgressPanel.SetActive(false);
-                state = MenuState.ProgressMenu;
                 break;
         }
     }
