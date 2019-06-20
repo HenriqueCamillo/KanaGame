@@ -183,291 +183,291 @@ MonoBehaviour:
     - Readings:
       - a
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - i
       Misses: 0
-      Appearences: 0
+      Appearences: 6
     - Readings:
       - u
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 2
     - Readings:
       - e
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 5
     - Readings:
       - o
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 4
     - Readings:
       - ka
-      Misses: 0
-      Appearences: 0
+      Misses: 3
+      Appearences: 6
     - Readings:
       - ki
-      Misses: 0
-      Appearences: 0
+      Misses: 5
+      Appearences: 8
     - Readings:
       - ku
       Misses: 0
-      Appearences: 0
+      Appearences: 4
     - Readings:
       - ke
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 8
     - Readings:
       - ko
-      Misses: 0
-      Appearences: 0
+      Misses: 4
+      Appearences: 6
     - Readings:
       - sa
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 5
     - Readings:
       - shi
       - si
       Misses: 0
-      Appearences: 0
+      Appearences: 9
     - Readings:
       - su
-      Misses: 0
-      Appearences: 0
+      Misses: 4
+      Appearences: 8
     - Readings:
       - se
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - so
-      Misses: 0
-      Appearences: 0
+      Misses: 5
+      Appearences: 7
     - Readings:
       - ta
-      Misses: 0
-      Appearences: 0
+      Misses: 4
+      Appearences: 6
     - Readings:
       - chi
       - ti
-      Misses: 0
-      Appearences: 0
+      Misses: 3
+      Appearences: 7
     - Readings:
       - tsu
       - tu
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 6
     - Readings:
       - te
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 4
     - Readings:
       - to
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 5
     - Readings:
       - na
       Misses: 0
-      Appearences: 0
+      Appearences: 7
     - Readings:
       - ni
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 3
     - Readings:
       - nu
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - ne
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - no
       Misses: 0
-      Appearences: 0
+      Appearences: 6
     - Readings:
       - ha
       Misses: 0
-      Appearences: 0
+      Appearences: 2
     - Readings:
       - hi
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - fu
       - hu
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 2
     - Readings:
       - he
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 7
     - Readings:
       - ho
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 4
     - Readings:
       - ma
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 3
     - Readings:
       - mi
       Misses: 0
-      Appearences: 0
+      Appearences: 4
     - Readings:
       - mu
-      Misses: 0
-      Appearences: 0
+      Misses: 3
+      Appearences: 8
     - Readings:
       - me
-      Misses: 0
-      Appearences: 0
+      Misses: 4
+      Appearences: 9
     - Readings:
       - mo
       Misses: 0
-      Appearences: 0
+      Appearences: 2
     - Readings:
       - ya
       Misses: 0
-      Appearences: 0
+      Appearences: 2
     - Readings:
       - yu
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - yo
       Misses: 0
-      Appearences: 0
+      Appearences: 4
     - Readings:
       - ra
       Misses: 0
-      Appearences: 0
+      Appearences: 5
     - Readings:
       - ri
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 5
     - Readings:
       - ru
-      Misses: 0
-      Appearences: 0
+      Misses: 3
+      Appearences: 7
     - Readings:
       - re
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - ro
       Misses: 0
-      Appearences: 0
+      Appearences: 6
     - Readings:
       - wa
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 9
     - Readings:
       - wo
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 5
     - Readings:
       - n
       Misses: 0
-      Appearences: 0
+      Appearences: 6
     - Readings:
       - ga
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 2
     - Readings:
       - gi
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - gu
-      Misses: 0
-      Appearences: 0
+      Misses: 4
+      Appearences: 5
     - Readings:
       - ge
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 4
     - Readings:
       - go
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 7
     - Readings:
       - za
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 3
     - Readings:
       - ji
       Misses: 0
-      Appearences: 0
+      Appearences: 6
     - Readings:
       - zu
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 6
     - Readings:
       - ze
-      Misses: 0
-      Appearences: 0
+      Misses: 3
+      Appearences: 4
     - Readings:
       - zo
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 5
     - Readings:
       - da
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 7
     - Readings:
       - di
-      Misses: 0
-      Appearences: 0
+      Misses: 5
+      Appearences: 9
     - Readings:
       - dzu
-      Misses: 0
-      Appearences: 0
+      Misses: 4
+      Appearences: 6
     - Readings:
       - de
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 5
     - Readings:
       - do
-      Misses: 0
-      Appearences: 0
+      Misses: 3
+      Appearences: 7
     - Readings:
       - ba
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - bi
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 4
     - Readings:
       - bu
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 6
     - Readings:
       - be
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - bo
-      Misses: 0
-      Appearences: 0
+      Misses: 4
+      Appearences: 8
     - Readings:
       - pa
-      Misses: 0
-      Appearences: 0
+      Misses: 6
+      Appearences: 7
     - Readings:
       - pi
       Misses: 0
-      Appearences: 0
+      Appearences: 3
     - Readings:
       - pu
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 4
     - Readings:
       - pe
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 5
     - Readings:
       - po
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 3
   katakanaStats:
     reorderableList:
       canAdd: 1
@@ -475,7 +475,7 @@ MonoBehaviour:
       draggable: 1
       expandable: 1
       multipleSelection: 1
-      isExpanded: 1
+      isExpanded: 0
       label:
         m_Text: Keys
         m_Image: {fileID: 0}
@@ -490,7 +490,7 @@ MonoBehaviour:
       elementNameOverride: 
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
-    isExpanded: 1
+    isExpanded: 0
     _keyValues:
     - "\u30AB"
     _keys:

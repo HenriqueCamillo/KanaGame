@@ -17,18 +17,12 @@ public class KanaDatabase : ScriptableObject  // The ScriptableObject inheritanc
     /// <summary>
     ///     Should the player want to reset this progress.
     /// </summary>
-    public void ResetHitsMisses()
+    public void ResetHitsMisses(KanaDictionary alphabet)
     {
-        foreach(var key in hiraganaStats.Keys)
+        foreach(var key in alphabet.Keys)
         {
-            hiraganaStats[key].Appearences  =   0;
-            hiraganaStats[key].Misses       =   0;
-        }
-        
-        foreach(var key in katakanaStats.Keys)
-        {
-            katakanaStats[key].Appearences  =   0;
-            katakanaStats[key].Misses       =   0;
+            alphabet[key].Appearences  =   0;
+            alphabet[key].Misses       =   0;
         }
     }
 

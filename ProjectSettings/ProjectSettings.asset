@@ -515,6 +515,7 @@ PlayerSettings:
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
     1: RHSD
+    7: RHSD
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
