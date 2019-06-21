@@ -99,6 +99,22 @@ public class MainMenu : MonoBehaviour
     }
 
     /// <summary>
+    /// Deleta o progresso de um alfabeto passado por parâmetro
+    /// </summary>
+    /// <param name="alphabet">Alfabeto que terá seu progresso resetado</param>
+    public void ResetAlphabet(string alphabet)
+    {
+        KanaDictionary dictionary = null;
+
+        if (alphabet.Equals("Hiragana"))
+            dictionary = GameManager.instance.kanaDatabase.hiraganaStats;
+        else if (alphabet.Equals("Katakana"))
+            dictionary = GameManager.instance.kanaDatabase.katakanaStats;
+
+        GameManager.instance.kanaDatabase.ResetHitsMisses(dictionary);
+    }
+
+    /// <summary>
     /// Sai do jogo
     /// </summary>
     public void Quit()
