@@ -414,10 +414,11 @@ MonoBehaviour:
       Appearences: 0
     - Readings:
       - di
-      Misses: 1
-      Appearences: 1
+      Misses: 0
+      Appearences: 0
     - Readings:
       - dzu
+      - du
       Misses: 0
       Appearences: 0
     - Readings:

@@ -8,51 +8,48 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class Buttons : MonoBehaviour
 {
+
     /// <summary>
-    /// Vai para o modo de jogo de indentificação de hiragana
+    /// Mostra o progresso atual do silabário escolhido
     /// </summary>
-    public void IndentifyHiragana()
+    /// <param name="alphabet">Silabário escolhido</param>
+    public void ShowProgress(string alphabet)
     {
+        if (alphabet.Equals("Hiragana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Hiragana;
+        else if (alphabet.Equals("Katakana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Katakana;
+
+        SceneManager.LoadScene("Progress");
+    }
+
+    /// <summary>
+    /// Vai para o modo de jogo de indentificação
+    /// </summary>
+    /// <param name="alphabet">Silabário escolhido</param>
+    public void Indentify(string alphabet)
+    {
+        if (alphabet.Equals("Hiragana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Hiragana;
+        else if (alphabet.Equals("Katakana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Katakana;
+
+        SceneManager.LoadScene("Identify");
 
     }
 
     /// <summary>
-    /// Vai para o modo de jogo de escrita de hiragana
+    /// Vai para o modo de jogo de escrita 
     /// </summary>
-    public void WriteHiragana()
+    /// <param name="alphabet">Silabário escolhido</param>
+    public void Write(string alphabet)
     {
+        if (alphabet.Equals("Hiragana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Hiragana;
+        else if (alphabet.Equals("Katakana"))
+            GameManager.instance.alphabet = GameManager.Alphabet.Katakana;
 
-    }
-
-    /// <summary>
-    /// Vai para o modo de jogo de indentificação de katakana
-    /// </summary>
-    public void IndentifyKatakana()
-    {
-
-    }
-
-    /// <summary>
-    /// Vai para o modo de jogo de escrita de katakana
-    /// </summary>
-    public void WriteKatakana()
-    {
-
-    }
-
-    /// <summary>
-    /// Vai para a tela de mostrar progresso de hiragana
-    /// </summary>
-    public void ViewHiraganaProgress()
-    {
-
-    }
-
-    /// <summary>
-    /// Vai para a tela de mostrar progresso de hiragana
-    /// </summary>
-    public void ViewKatakanaProgress()
-    {
+        SceneManager.LoadScene("Write");
 
     }
 
@@ -61,7 +58,9 @@ public class Buttons : MonoBehaviour
     /// </summary>
     public void Menu()
     {
-        if (!SceneManager.GetActiveScene().name.Equals("Menu"))
-            SceneManager.LoadScene("Menu");
+        if (!SceneManager.GetActiveScene().name.Equals("MainMenu"))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b4be8496e296995429eace851b1bfb48
+  - enabled: 1
+    path: Assets/Scenes/Progress.unity
+    guid: 6023bee527904984199d5be889e51fcd
+  - enabled: 1
+    path: Assets/Scenes/Write.unity
+    guid: b9777a01015a2e044afd2b87515b42b5
   m_configObjects: {}
