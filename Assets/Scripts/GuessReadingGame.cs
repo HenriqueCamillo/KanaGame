@@ -10,6 +10,11 @@ public class GuessReadingGame : KanaGame
     [SerializeField]    Image           inputFieldBoxImage;
     [SerializeField]    TMP_InputField  inputField;
 
+    private void Awake()
+    {
+        inputField.interactable =   true;
+    }
+
     protected override void NextRound()
     {
         InvokeRepeating(nameof(FadeColorOut), 0f, Time.deltaTime);
@@ -23,14 +28,14 @@ public class GuessReadingGame : KanaGame
         correctReadings.text    =   "";
         showcaseKana.text       =   newKana.Key;
         correctAnswer           =   newKana;
-        inputField.interactable =   true;
-        inputField.ActivateInputField();
+        // inputField.ActivateInputField();
         inputField.Select();
+        inputField.text = "";
     }
 
     protected override void Feedback(bool isCorrect)
     {
-        inputField.interactable =   false;
+        // inputField.interactable =   false;
         CancelInvoke(nameof(FadeColorOut));
         if(isCorrect == true)
         {
