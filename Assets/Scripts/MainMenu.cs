@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject modeSelectPanel;
     [SerializeField] private GameObject deleteHiragana;
     [SerializeField] private GameObject deleteKatakana;
+    [SerializeField] private GameObject credits;
 
 
     // Indica em qual menu o jogador está e qual silabário foi escolhido
@@ -28,7 +29,7 @@ public class MainMenu : MonoBehaviour
         GameMenu,
         ModeSelectMenu,
         ProgressMenu,
-
+        Credits
     }
 
     /// <summary>
@@ -42,6 +43,7 @@ public class MainMenu : MonoBehaviour
         progressPanel.SetActive(false);
         deleteHiragana.SetActive(false);
         deleteKatakana.SetActive(false);
+        credits.SetActive(false);
     }
 
     /// <summary>
@@ -101,7 +103,21 @@ public class MainMenu : MonoBehaviour
                 deleteKatakana.SetActive(false);
                 state = MenuState.MainMenu;
                 break;
+            
+            case MenuState.Credits:
+                credits.SetActive(false);
+                state = MenuState.MainMenu;
+                break;
         }
+    }
+
+    /// <summary>
+    /// Mostra os créditos do jogo
+    /// </summary>
+    public void Credits()
+    {
+        credits.SetActive(true);
+        state = MenuState.Credits;
     }
 
     /// <summary>
