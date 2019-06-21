@@ -709,8 +709,9 @@ MonoBehaviour:
   inputField: {fileID: 1824948316}
   kanaDatabase: {fileID: 11400000, guid: ecab822802a85d845badbc63b699459e, type: 2}
   gamePanel: {fileID: 33785272}
-  minimumProbability: 0.001
-  maximumProbability: 0.4
+  minimumProbability: 0.01
+  maximumProbability: 0.15
+  randomKanaProbability: 0.05
   correctFeedbackDuration: 0
   incorrectFeedbackDuration: 1
   correctColor: {r: 0.15657258, g: 0.9528302, b: 0.112362035, a: 1}
@@ -1174,7 +1175,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1824948317}
   m_TextViewport: {fileID: 2071018994}
   m_TextComponent: {fileID: 1021985291}

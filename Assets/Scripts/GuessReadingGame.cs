@@ -16,6 +16,7 @@ public class GuessReadingGame : MonoBehaviour
     [SerializeField]    GameObject      gamePanel;
     [SerializeField]    float           minimumProbability;
     [SerializeField]    float           maximumProbability;
+    [SerializeField]    float           randomKanaProbability;
     [SerializeField]    float           correctFeedbackDuration;
     [SerializeField]    float           incorrectFeedbackDuration;
     [SerializeField]    Color           correctColor;
@@ -23,58 +24,65 @@ public class GuessReadingGame : MonoBehaviour
     [SerializeField]    float           colorLerpSpeed;
     private             KanaDictionary  currentAlphabet;
 
-    public enum Alphabet { Hiragana, Katakana };
 
     private void Start()
     {
-        StartGame(Alphabet.Hiragana);
+        StartGame(GameManager.instance.alphabet.Hiragana);
     }
 
-    public void StartGame(Alphabet alphabet)
+    public void StartGame(GameManager.Alphabet alphabet)
     {
-        if(alphabet == Alphabet.Hiragana)
+        if(alphabet == GameManager.Alphabet.Hiragana)
             currentAlphabet = kanaDatabase.hiraganaStats;
-        else if(alphabet == Alphabet.Katakana)
+        else if(alphabet == GameManager.Alphabet.Katakana)
             currentAlphabet = kanaDatabase.katakanaStats;
         
-        inputField.interactable = false;
         NextKana();
         gamePanel.SetActive(true);
     }
 
     public void NextKana()
     {
-        float missRatio;
+        float spawnRatio;
+        int randomIndex;
         bool hasFound = false;
+        KeyValuePair<string, ReadingsAndStats> currentKana;
         var orderedDictionary = currentAlphabet.OrderByDescending(a => a.Value.Appearences != 0 ? (float)a.Value.Misses / (float)a.Value.Appearences : 0f);
 
         InvokeRepeating(nameof(FadeColorOut), 0f, Time.deltaTime);
 
         do
         {
-            foreach(var currentElement in orderedDictionary)
+            if(Random.Range(0f, 1f) <= randomKanaProbability)
             {
-                missRatio   =   currentElement.Value.Appearences != 0 ? (float)currentElement.Value.Misses / (float)currentElement.Value.Appearences : 0;
+                hasFound                =   true;
+                randomIndex             =   Random.Range(0, currentAlphabet.Count);
+                currentKana             =   currentAlphabet.ElementAt(randomIndex);
+            }
+            else foreach(var kanaStats in orderedDictionary)
+            {
+                spawnRatio   =   kanaStats.Value.Appearences != 0 ? (float)kanaStats.Value.Misses / (float)kanaStats.Value.Appearences : 100;
+                if(spawnRatio == 0)
+                    spawnRatio = minimumProbability;
+                else if(spawnRatio > maximumProbability)
+                    spawnRatio = maximumProbability;
 
-                if(missRatio == 0)
-                    missRatio = minimumProbability;
-                else if(missRatio > maximumProbability)
-                    missRatio = maximumProbability;
-
-                if(Random.Range(0f, 1f) <= missRatio)
+                if(showcaseKana.text != kanaStats.Key && Random.Range(0f, 1f) < spawnRatio)
                 {
-                    hasFound = true;
-                    correctReadings.text    =   "";
-                    showcaseKana.text       =   currentElement.Key;
-                    inputField.interactable =   true;
-                    currentAlphabet[currentElement.Key].Appearences++;
-                    inputField.ActivateInputField();
-                    inputField.Select();
-                    return;
+                    currentKana          =   kanaStats;
+                    hasFound             =   true;
+                    break;
                 }
             }
         }
         while(hasFound == false);
+
+        correctReadings.text    =   "";
+        showcaseKana.text       =   currentKana.Key;
+        currentAlphabet[currentKana.Key].Appearences++;
+        inputField.interactable = true;
+        inputField.ActivateInputField();
+        inputField.Select();
     }
 
     public void Answer(string answer)
