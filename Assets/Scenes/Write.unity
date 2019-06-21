@@ -705,18 +705,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showcaseKana: {fileID: 1619163576}
   correctReadings: {fileID: 383020436}
-  inputFieldBoxImage: {fileID: 1824948317}
-  inputField: {fileID: 1824948316}
   kanaDatabase: {fileID: 11400000, guid: ecab822802a85d845badbc63b699459e, type: 2}
   gamePanel: {fileID: 33785272}
   minimumProbability: 0.01
   maximumProbability: 0.15
-  randomKanaProbability: 0.05
+  randomKanaProbability: 0.7
   correctFeedbackDuration: 0
   incorrectFeedbackDuration: 1
-  correctColor: {r: 0.15657258, g: 0.9528302, b: 0.112362035, a: 1}
-  incorrectColor: {r: 0.9528302, g: 0.22921856, b: 0.22921856, a: 1}
+  correctColor:
+    r: 0.15657258
+    g: 0.9528302
+    b: 0.112362035
+    a: 1
+  incorrectColor:
+    r: 0.9528302
+    g: 0.22921856
+    b: 0.22921856
+    a: 1
   colorLerpSpeed: 0.05
+  isDebugMode: 1
+  debugAlphabet: 0
+  currentAlphabet:
+    reorderableList:
+      canAdd: 0
+      canRemove: 0
+      draggable: 0
+      expandable: 0
+      multipleSelection: 0
+      isExpanded: 0
+      label:
+        m_Text: 
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      headerHeight: 0
+      footerHeight: 0
+      slideEasing: 0
+      verticalSpacing: 0
+      showDefaultBackground: 0
+      elementDisplayType: 0
+      elementNameProperty: 
+      elementNameOverride: 
+      elementIcon: {fileID: 0}
+      controlID: 0
+      elementRects: []
+      elementLabel:
+        m_Text: 
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      pressIndex: 0
+      dragging: 0
+      pressPosition: 0
+      dragPosition: 0
+      dragDirection: 0
+      dragDropControlID: 0
+      enablePages: 0
+      perPageCount: 0
+      currentPage: 0
+      pagesCount: 0
+      showPage: 0
+    reqReferences: {fileID: 0}
+    isExpanded: 0
+    _keyValues: []
+    _keys: []
+    _values: []
+  inputFieldBoxImage: {fileID: 1824948317}
+  inputField: {fileID: 1824948316}
 --- !u!1 &1157601177
 GameObject:
   m_ObjectHideFlags: 0
