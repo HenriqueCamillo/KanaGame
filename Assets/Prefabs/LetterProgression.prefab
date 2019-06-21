@@ -242,6 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8270337559819421579}
   - component: {fileID: 5158789215471110098}
+  - component: {fileID: 3999336647913533537}
   - component: {fileID: 4675259949689060463}
   m_Layer: 5
   m_Name: Letter
@@ -277,6 +278,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7169079639695282815}
   m_CullTransparentMesh: 0
+--- !u!114 &3999336647913533537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169079639695282815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc63c876aaf49241b00b514a226b0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hiragana: {fileID: 11400000, guid: 40fde51de0e726b4a864650fb15c154f, type: 2}
+  katakana: {fileID: 11400000, guid: f797342c16f4db949a91cb43dc94862f, type: 2}
+  letter: {fileID: 4675259949689060463}
 --- !u!114 &4675259949689060463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +315,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "\u3042"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40fde51de0e726b4a864650fb15c154f, type: 2}
-  m_sharedMaterial: {fileID: 1454772557847671369, guid: 40fde51de0e726b4a864650fb15c154f,
+  m_fontAsset: {fileID: 11400000, guid: f797342c16f4db949a91cb43dc94862f, type: 2}
+  m_sharedMaterial: {fileID: -9006984477594243999, guid: f797342c16f4db949a91cb43dc94862f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
