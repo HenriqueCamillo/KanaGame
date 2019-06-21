@@ -187,11 +187,11 @@ MonoBehaviour:
     - Readings:
       - i
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - u
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - e
       Misses: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
     - Readings:
       - ki
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - ku
       Misses: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
     - Readings:
       - sa
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - shi
       - si
@@ -281,12 +281,12 @@ MonoBehaviour:
       Appearences: 0
     - Readings:
       - no
-      Misses: 0
-      Appearences: 0
+      Misses: 2
+      Appearences: 2
     - Readings:
       - ha
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - hi
       Misses: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
       Appearences: 0
     - Readings:
       - mo
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 1
     - Readings:
       - ya
       Misses: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
     - Readings:
       - n
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - ga
       Misses: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
     - Readings:
       - gi
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - gu
       Misses: 0
@@ -394,8 +394,8 @@ MonoBehaviour:
       Appearences: 0
     - Readings:
       - ji
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 1
     - Readings:
       - zu
       Misses: 0
@@ -427,8 +427,8 @@ MonoBehaviour:
       Appearences: 0
     - Readings:
       - do
-      Misses: 0
-      Appearences: 0
+      Misses: 1
+      Appearences: 1
     - Readings:
       - ba
       Misses: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
     - Readings:
       - bu
       Misses: 0
-      Appearences: 0
+      Appearences: 1
     - Readings:
       - be
       Misses: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
       draggable: 1
       expandable: 1
       multipleSelection: 1
-      isExpanded: 0
+      isExpanded: 1
       label:
         m_Text: Keys
         m_Image: {fileID: 0}
@@ -491,12 +491,18 @@ MonoBehaviour:
       elementNameOverride: 
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
-    isExpanded: 0
+    isExpanded: 1
     _keyValues:
-    - "\u30AB"
+    - "\u3042"
+    - 
     _keys:
-    - "\u30AB"
+    - "\u3042"
+    - 
     _values:
+    - Readings:
+      - a
+      Misses: 0
+      Appearences: 0
     - Readings: []
       Misses: 0
       Appearences: 0
