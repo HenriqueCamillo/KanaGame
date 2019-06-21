@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject gamePanel;
     [SerializeField] private GameObject progressPanel;
     [SerializeField] private GameObject modeSelectPanel;
+    [SerializeField] private GameObject deleteHiragana;
+    [SerializeField] private GameObject deleteKatakana;
 
 
     // Indica em qual menu o jogador está e qual silabário foi escolhido
@@ -38,6 +40,8 @@ public class MainMenu : MonoBehaviour
         gamePanel.SetActive(false);
         modeSelectPanel.SetActive(false);
         progressPanel.SetActive(false);
+        deleteHiragana.SetActive(false);
+        deleteKatakana.SetActive(false);
     }
 
     /// <summary>
@@ -93,6 +97,8 @@ public class MainMenu : MonoBehaviour
 
             case MenuState.ProgressMenu:
                 progressPanel.SetActive(false);
+                deleteHiragana.SetActive(false);
+                deleteKatakana.SetActive(false);
                 state = MenuState.MainMenu;
                 break;
         }
@@ -112,6 +118,28 @@ public class MainMenu : MonoBehaviour
             dictionary = GameManager.instance.kanaDatabase.katakanaStats;
 
         GameManager.instance.kanaDatabase.ResetHitsMisses(dictionary);
+        CloseWarningMessage();
+    }
+
+    /// <summary>
+    /// Mostra tela de aviso ao pedir para deletar progresso
+    /// </summary>
+    /// <param name="alphabet"></param>
+    public void WarningMessage(string alphabet)
+    {
+        if (alphabet.Equals("Hiragana"))
+            deleteHiragana.SetActive(true);
+        else if (alphabet.Equals("Katakana"))
+            deleteKatakana.SetActive(true);
+    }
+
+    /// <summary>
+    /// Fecha a mensagem de aviso
+    /// </summary>
+    public void CloseWarningMessage()
+    {
+        deleteHiragana.SetActive(false);
+        deleteKatakana.SetActive(false);
     }
 
     /// <summary>
