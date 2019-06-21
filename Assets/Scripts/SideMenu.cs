@@ -57,8 +57,9 @@ public class SideMenu : MonoBehaviour
     private void DetectSwipe() 
     {
         // Pega o vetor do movimento e verifica se o deslizamento no eixo x foi o suficiente para ser considerado
+        // Verifica também se o swipe foi horizontal
         Vector2 swipe = touchEnd - touchBegin;
-        if (Mathf.Abs(swipe.x) > swipeMinDistance)
+        if (Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y) && Mathf.Abs(swipe.x) > swipeMinDistance)
         {
             // Dependendo da direção do deslizamento, abre ou fecha o menu
             if (swipe.x > 0f)

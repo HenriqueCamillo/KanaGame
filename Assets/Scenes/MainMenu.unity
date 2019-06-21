@@ -2336,32 +2336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanaDatabase: {fileID: 11400000, guid: ecab822802a85d845badbc63b699459e, type: 2}
-  kanaDictionary:
-    reorderableList:
-      canAdd: 1
-      canRemove: 1
-      draggable: 1
-      expandable: 1
-      multipleSelection: 1
-      isExpanded: 1
-      label:
-        m_Text: Keys
-        m_Image: {fileID: 0}
-        m_Tooltip: 
-      headerHeight: 18
-      footerHeight: 13
-      slideEasing: 0.15
-      verticalSpacing: 2
-      showDefaultBackground: 1
-      elementDisplayType: 0
-      elementNameProperty: 
-      elementNameOverride: 
-      elementIcon: {fileID: 0}
-    reqReferences: {fileID: 0}
-    isExpanded: 1
-    _keyValues: []
-    _keys: []
-    _values: []
   alphabet: 0
 --- !u!4 &1225997294
 Transform:
