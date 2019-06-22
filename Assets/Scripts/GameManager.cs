@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Classe com referência estática a ela mesma (singleton) para que todos possam acessar
+/// os atributos dela. Armazena qual o alfabeto escolhido, e os dicinários dos dois alfabetos
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     // Referência estática ao game manager
@@ -29,10 +33,5 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
 
         DontDestroyOnLoad(this.gameObject);
-    }
-
-    void Update()
-    {
-        
     }
 }
