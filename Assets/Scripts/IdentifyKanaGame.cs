@@ -6,12 +6,19 @@ using UnityEngine.UI;
 using System.Linq;
 using System;
 
+/// <summary>
+///     Jogo de identificação, deixa a leitura de um caractere exposta e espera que o jogador selecione a resposta que contém o caractere em si.
+///     Basicamente é gerado caracteres para cada opção, evitando repetições, e aguarda que o jogador clique em alguma delas.
+/// </summary>
 public class IdentifyKanaGame : KanaGame
 {
     [SerializeField]    TextMeshProUGUI     showcaseReading;
     [SerializeField]    AnswerOption[]      answerOptions;
     private             AnswerOption        selectedOption;
 
+    /// <summary>
+    ///     Define uma rodada do modo de jogo de identificação. Isto é: Gerar um caractere para ser questionado e um para cada uma das opções, evitando repetições.
+    /// </summary>
     protected override void NextRound()
     {
         InvokeRepeating(nameof(FadeColorOut), 0f, Time.deltaTime);
@@ -43,12 +50,21 @@ public class IdentifyKanaGame : KanaGame
             option.Button.interactable = true;
     }
 
+    /// <summary>
+    ///     Função que lida com o click de um botão de resposta, mandando a string daquela opção para a função answer.
+    /// </summary>
+    /// <param name="option">   Botão selecionado.  </param>
     public void SelectOption(AnswerOption option)
     {
         selectedOption  =   option;
         Answer(option.Kana.text);
     }
 
+    /// <summary>
+    ///     Feedback do modo de jogo de identificação, deixa verde o botão da resposta correta e vermelho os das incorretas.
+    ///     Deixa por mais tempo quando é incorreta, para o jogador entender direito.
+    /// </summary>
+    /// <param name="isCorrect"></param>
     protected override void Feedback(bool isCorrect)
     {
         CancelInvoke(nameof(FadeColorOut));
@@ -69,6 +85,9 @@ public class IdentifyKanaGame : KanaGame
             Invoke(nameof(NextRound), incorrectFeedbackDuration);
     }
 
+    /// <summary>
+    ///     Volta as cores do feedback ao normal.
+    /// </summary>
     protected override void FadeColorOut()
     {
         foreach(var option in answerOptions)
@@ -80,6 +99,11 @@ public class IdentifyKanaGame : KanaGame
         }
     }
 
+    /// <summary>
+    ///     Verifica se a silaba selecionada na resposta tem a leitura indicada.
+    /// </summary>
+    /// <param name="answer">   String da resposta. </param>
+    /// <returns></returns>
     protected override bool CompareAnswer(string answer)
     {
         return correctAnswer.Key.Equals(answer);
